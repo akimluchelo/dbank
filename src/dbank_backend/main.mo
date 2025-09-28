@@ -32,7 +32,7 @@ persistent actor DBank {
     let currentTime = Time.now();
     let timeElapsedNaS = currentTime - startTime;
     let timeElapsedS = timeElapsedNaS / 1000000000;
-    currentValue := currentValue * (Float.pow(1.0 + 0.01, Float.fromInt(timeElapsedS)));
+    currentValue := currentValue * (Float.pow(1.0 + 0.000001, Float.fromInt(timeElapsedS)));
     startTime := currentTime;
   };
 
